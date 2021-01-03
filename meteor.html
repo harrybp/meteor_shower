@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <ul>
+    <li id="hs"></li>
+    <li>Move with arrow keys</li>
+    <li>Press p to pause</li>
+    <li>Stay in the green</li>
+    <li>Avoid the black and white blocks</li>
+    <li>Collect the red blocks</li>
+  </ul>
+
+<div class="header" id="header">
+<div id="score-container" class="score">
+  <p id="score">Score: 0</p>
+</div>
+<div id="level-container" class="level">
+  <p id="level">Level: 1</p>
+</div>
+</div>
+<div class="wrapper" id="wrapper">
+  <div class="safe" id="safe">
+  </div>
+  <div class="box" id="box">
+  </div>
+</div>
+<div class="progress-container" id="progress-container">
+<div class="progress" id="progress"></div>
+</div>
+<script src="meteor.js"></script>
+</body>
+<style type="text/css">
+  .header {
+    position: relative;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    height: 40px;
+    background-color: #c6f6ff;
+  }
+  .level {
+    position: absolute;
+    border-right: 2px solid black;
+    height: 40px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #fdffc6;
+  }
+  .score {
+    position: absolute;
+    height: 40px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+  }
+  .wrapper{
+    position: relative;
+    background-color: rgb(255, 188, 188);
+    border: 2px black solid;
+  }
+  .box {
+    background-color: blue;
+    position: absolute;
+  }
+  .obstacle {
+    position: absolute;
+  }
+  .downObstacle {
+    background-color: black;
+  }
+  .leftObstacle {
+    background-color: white;
+    border: 1px solid black;
+  }
+  .healthObstacle {
+    background-color: red !important;
+    border-radius: 5px;
+  }
+  .safe {
+    background-color: rgb(193, 255, 188);
+    position: absolute;
+  }
+  .progress {
+    background-color: red;
+    height: 20px;
+  }
+  .progress-container {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  .pause {
+    width: 20px;
+    height: 60px;
+    border-right: 20px solid #000;
+    border-left: 20px solid #000;
+    position: absolute;
+  }
+  .buttons {
+    text-align: center;
+    font-size: 500%;
+  }
+  .hide {
+    visibility: hidden;
+  }
+</style>
